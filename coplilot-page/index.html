@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub: Let's build from here</title>
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<nav class="main-nav">
+    <div class="nav-container">
+        <div class="nav-left">
+            <div class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <a href="/landing Page/index.html"><i class="fa-brands fa-github logo-white"></i></a>
+
+            <ul class="nav-links" id="navLinks">
+                <!-- Mobile Menu Header -->
+                <div class="mobile-menu-header">
+                    <div class="mobile-menu-close" onclick="toggleMobileMenu()">
+                        <i class="fa-solid fa-xmark"></i>
+                    </div>
+                    <i class="fa-brands fa-github mobile-menu-logo"></i>
+                    <a href="#" class="mobile-menu-signin">Sign in</a>
+                </div>
+
+                <!-- Menu Items - NO dropdown arrow on mobile -->
+                <li class="has-dropdown">
+                    <a href="#" class="nav-item">
+                        <span>Platform</span>
+                        <i class="fa-solid fa-chevron-right mobile-chevron"></i>
+                        <i class="fa-solid fa-chevron-down icon-small"></i>
+                    </a>
+                    <div class="mega-menu platform-menu">
+                        <div class="mega-menu-content">
+                            <div class="menu-column">
+                                <span class="column-title">AI Code Creation</span>
+                                <a href="#" class="menu-item">
+                                    <i class="fa-solid fa-robot"></i>
+                                    <div><strong>GitHub Copilot</strong><p>Write better code with AI</p></div>
+                                </a>
+                                <a href="#" class="menu-item">
+                                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                                    <div><strong>GitHub Spark</strong><p>Build and deploy intelligent apps</p></div>
+                                </a>
+                                <a href="#" class="menu-item">
+                                    <i class="fa-solid fa-share-nodes"></i>
+                                    <div><strong>GitHub Models</strong><p>Manage and compare prompts</p></div>
+                                </a>
+                                <a href="#" class="menu-item">
+                                    <i class="fa-solid fa-microchip"></i>
+                                    <div><strong>MCP Registry <span class="badge-new">New</span></strong><p>Integrate external tools</p></div>
+                                </a>
+                            </div>
+
+                            <div class="menu-column">
+                                <span class="column-title">Developer Workflows</span>
+                                <a href="#" class="menu-item">
+                                    <i class="fa-solid fa-play"></i>
+                                    <div><strong>Actions</strong><p>Automate any workflow</p></div>
+                                </a>
+                                <a href="#" class="menu-item">
+                                    <i class="fa-solid fa-laptop-code"></i>
+                                    <div><strong>Codespaces</strong><p>Instant dev environments</p></div>
+                                </a>
+                                <a href="#" class="menu-item">
+                                    <i class="fa-regular fa-circle-dot"></i>
+                                    <div><strong>Issues</strong><p>Plan and track work</p></div>
+                                </a>
+                                <a href="#" class="menu-item">
+                                    <i class="fa-solid fa-code-pull-request"></i>
+                                    <div><strong>Code Review</strong><p>Manage code changes</p></div>
+                                </a>
+                            </div>
+
+                            <div class="menu-column">
+                                <span class="column-title">Application Security</span>
+                                <a href="#" class="menu-item">
+                                    <i class="fa-solid fa-shield-halved"></i>
+                                    <div><strong>GitHub Advanced Security</strong><p>Find and fix vulnerabilities</p></div>
+                                </a>
+                                <a href="#" class="menu-item">
+                                    <i class="fa-solid fa-code"></i>
+                                    <div><strong>Code security</strong><p>Secure your code</p></div>
+                                </a>
+                                <a href="#" class="menu-item">
+                                    <i class="fa-solid fa-lock"></i>
+                                    <div><strong>Secret protection</strong><p>Stop leaks</p></div>
+                                </a>
+                            </div>
+
+                            <div class="menu-column explore-col">
+                                <span class="column-title">Explore</span>
+                                <a href="#" class="simple-item">Why GitHub <i class="fa-solid fa-arrow-up-right-from-square icon-external"></i></a>
+                                <a href="#" class="simple-item">Documentation <i class="fa-solid fa-arrow-up-right-from-square icon-external"></i></a>
+                                <a href="#" class="simple-item">Blog <i class="fa-solid fa-arrow-up-right-from-square icon-external"></i></a>
+                                <a href="#" class="simple-item">Changelog <i class="fa-solid fa-arrow-up-right-from-square icon-external"></i></a>
+                                <a href="#" class="simple-item">Marketplace <i class="fa-solid fa-arrow-up-right-from-square icon-external"></i></a>
+                            </div>
+                        </div>
+                        <div class="mega-menu-footer">
+                            <a href="#">View all features <i class="fa-solid fa-chevron-right"></i></a>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="has-dropdown">
+                    <a href="#" class="nav-item">
+                        <span>Solutions</span>
+                        <i class="fa-solid fa-chevron-right mobile-chevron"></i>
+                        <i class="fa-solid fa-chevron-down icon-small"></i>
+                    </a>
+                    <div class="mega-menu solutions-menu">
+                        <div class="mega-menu-content">
+                            <div class="menu-column">
+                                <span class="column-title">By Company Size</span>
+                                <a href="#" class="simple-item">Enterprises <i class="fa-solid fa-arrow-up-right-from-square icon-external"></i></a>
+                                <a href="#" class="simple-item">Small & medium teams <i class="fa-solid fa-arrow-up-right-from-square icon-external"></i></a>
+                                <a href="#" class="simple-item">Startups <i class="fa-solid fa-arrow-up-right-from-square icon-external"></i></a>
+                                <a href="#" class="simple-item">Nonprofits <i class="fa-solid fa-arrow-up-right-from-square icon-external"></i></a>
+                            </div>
+                            <div class="menu-column">
+                                <span class="column-title">By Use Case</span>
+                                <a href="#" class="simple-item">App Modernization <i class="fa-solid fa-arrow-up-right-from-square icon-external"></i></a>
+                                <a href="#" class="simple-item">DevSecOps <i class="fa-solid fa-arrow-up-right-from-square icon-external"></i></a>
+                                <a href="#" class="simple-item">DevOps <i class="fa-solid fa-arrow-up-right-from-square icon-external"></i></a>
+                                <a href="#" class="simple-item">CI/CD <i class="fa-solid fa-arrow-up-right-from-square icon-external"></i></a>
+                                <a href="#" class="footer-link-inline">View all use cases <i class="fa-solid fa-chevron-right"></i></a>
+                            </div>
+                            <div class="menu-column">
+                                <span class="column-title">By Industry</span>
+                                <a href="#" class="simple-item">Healthcare <i class="fa-solid fa-arrow-up-right-from-square icon-external"></i></a>
+                                <a href="#" class="simple-item">Financial services <i class="fa-solid fa-arrow-up-right-from-square icon-external"></i></a>
+                                <a href="#" class="simple-item">Manufacturing <i class="fa-solid fa-arrow-up-right-from-square icon-external"></i></a>
+                                <a href="#" class="simple-item">Government <i class="fa-solid fa-arrow-up-right-from-square icon-external"></i></a>
+                                <a href="#" class="footer-link-inline">View all industries <i class="fa-solid fa-chevron-right"></i></a>
+                            </div>
+                        </div>
+                        <div class="mega-menu-footer">
+                            <a href="#">View all solutions <i class="fa-solid fa-chevron-right"></i></a>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="has-dropdown">
+                    <a href="#" class="nav-item">
+                        <span>Resources</span>
+                        <i class="fa-solid fa-chevron-right mobile-chevron"></i>
+                        <i class="fa-solid fa-chevron-down icon-small"></i>
+                    </a>
+                    <div class="mega-menu resources-menu">
+                        <div class="mega-menu-content">
+                            <div class="menu-column">
+                                <span class="column-title">Explore by Topic</span>
+                                <a href="#" class="simple-item">AI <i class="fa-solid fa-arrow-up-right-from-square icon-external"></i></a>
+                                <a href="#" class="simple-item">Software Development <i class="fa-solid fa-arrow-up-right-from-square icon-external"></i></a>
+                                <a href="#" class="simple-item">DevOps <i class="fa-solid fa-arrow-up-right-from-square icon-external"></i></a>
+                                <a href="#" class="simple-item">Security <i class="fa-solid fa-arrow-up-right-from-square icon-external"></i></a>
+                                <a href="#" class="footer-link-inline">View all topics <i class="fa-solid fa-chevron-right"></i></a>
+                            </div>
+                            <div class="menu-column">
+                                <span class="column-title">Explore by Type</span>
+                                <a href="#" class="simple-item">Customer stories <i class="fa-solid fa-arrow-up-right-from-square icon-external"></i></a>
+                                <a href="#" class="simple-item">Events & webinars <i class="fa-solid fa-arrow-up-right-from-square icon-external"></i></a>
+                                <a href="#" class="simple-item">Ebooks & reports <i class="fa-solid fa-arrow-up-right-from-square icon-external"></i></a>
+                                <a href="#" class="simple-item">Business insights <i class="fa-solid fa-arrow-up-right-from-square icon-external"></i></a>
+                                <a href="#" class="simple-item">Github skills <i class="fa-solid fa-arrow-up-right-from-square icon-external"></i></a>
+                            </div>
+                            <div class="menu-column">
+                                <span class="column-title">Support & Services</span>
+                                <a href="#" class="simple-item">Documentation <i class="fa-solid fa-arrow-up-right-from-square icon-external"></i></a>
+                                <a href="#" class="simple-item">Customer support <i class="fa-solid fa-arrow-up-right-from-square icon-external"></i></a>
+                                <a href="#" class="simple-item">Community forum <i class="fa-solid fa-arrow-up-right-from-square icon-external"></i></a>
+                                <a href="#" class="simple-item">Trust Center <i class="fa-solid fa-arrow-up-right-from-square icon-external"></i></a>
+                                <a href="#" class="simple-item">Partners <i class="fa-solid fa-arrow-up-right-from-square icon-external"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="has-dropdown">
+                    <a href="#" class="nav-item">
+                        <span>Open Source</span>
+                        <i class="fa-solid fa-chevron-right mobile-chevron"></i>
+                        <i class="fa-solid fa-chevron-down icon-small"></i>
+                    </a>
+                    <div class="mega-menu open-source-menu">
+                        <div class="mega-menu-content">
+                            <div class="menu-column">
+                                <span class="column-title">Community</span>
+                                <a href="#" class="menu-item">
+                                    <i class="fa-regular fa-heart"></i>
+                                    <div><strong>GitHub Sponsors</strong><p>Fund open source developers</p></div>
+                                </a>
+                            </div>
+                            <div class="menu-column">
+                                <span class="column-title">Programs</span>
+                                <a href="#" class="simple-item">Security Lab <i class="fa-solid fa-arrow-up-right-from-square icon-external"></i></a>
+                                <a href="#" class="simple-item">Maintainer Community <i class="fa-solid fa-arrow-up-right-from-square icon-external"></i></a>
+                                <a href="#" class="simple-item">Accelerator <i class="fa-solid fa-arrow-up-right-from-square icon-external"></i></a>
+                                <a href="#" class="simple-item">Archive Program <i class="fa-solid fa-arrow-up-right-from-square icon-external"></i></a>
+                            </div>
+                            <div class="menu-column">
+                                <span class="column-title">Repositories</span>
+                                <a href="#" class="simple-item">Topics <i class="fa-solid fa-arrow-up-right-from-square icon-external"></i></a>
+                                <a href="#" class="simple-item">Trending <i class="fa-solid fa-arrow-up-right-from-square icon-external"></i></a>
+                                <a href="#" class="simple-item">Collections <i class="fa-solid fa-arrow-up-right-from-square icon-external"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="has-dropdown">
+                    <a href="#" class="nav-item">
+                        <span>Enterprise</span>
+                        <i class="fa-solid fa-chevron-right mobile-chevron"></i>
+                        <i class="fa-solid fa-chevron-down icon-small"></i>
+                    </a>
+                    <div class="mega-menu enterprise-menu">
+                        <div class="mega-menu-content">
+                            <div class="menu-column">
+                                <span class="column-title">Enterprise Solutions</span>
+                                <a href="#" class="menu-item">
+                                    <i class="fa-solid fa-layer-group"></i>
+                                    <div><strong>Enterprise platform</strong><p>AI-powered developer platform</p></div>
+                                </a>
+                            </div>
+                            <div class="menu-column">
+                                <span class="column-title">Available Add-ons</span>
+                                <a href="#" class="menu-item">
+                                    <i class="fa-solid fa-shield-halved"></i>
+                                    <div><strong>GitHub Advanced Security</strong><p>Enterprise-grade security features</p></div>
+                                </a>
+                                <a href="#" class="menu-item">
+                                    <i class="fa-solid fa-robot"></i>
+                                    <div><strong>Copilot for Business</strong><p>Enterprise-grade AI features</p></div>
+                                </a>
+                                <a href="#" class="menu-item">
+                                    <i class="fa-regular fa-comment-dots"></i>
+                                    <div><strong>Premium Support</strong><p>Enterprise-grade 24/7 support</p></div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                
+                <li><a href="#" class="nav-item">
+                    <span>Pricing</span>
+                    <i class="fa-solid fa-chevron-right mobile-chevron"></i>
+                </a></li>
+                
+                <!-- Mobile Search & Signup Section -->
+                <div class="mobile-bottom-section">
+                    <div class="mobile-search-wrapper">
+                        <div class="mobile-search-container">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <input type="text" placeholder="Search or jump to..." class="mobile-search-input">
+                            <span class="mobile-search-shortcut">/</span>
+                        </div>
+                    </div>
+                    
+                    <div class="mobile-signup-wrapper">
+                        <a href="#" class="mobile-btn-signup">Sign up</a>
+                    </div>
+                </div>
+            </ul>
+        </div>
+
+        <div class="nav-right">
+            <div class="search-container">
+                <form class="search-form">
+                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                    <input type="text" class="search-input" placeholder="Search or jump to...">
+                    <span class="search-shortcut">/</span>
+                </form>
+            </div>
+            <a href="/login/index.html" class="nav-link-sign">Sign in</a>
+            <a href="/signup/index.html" class="btn-signup">Sign up</a>
+        </div>
+    </div>
+</nav>
+<div class="page-wrapper">
+    <main class="content-container">
+        <div class="copilot-card">
+            <div class="icon-header">
+                <div class="icon-glow"></div>
+                <div class="copilot-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2C6.477 2 2 6.477 2 12C2 17.523 6.477 22 12 22C17.523 22 22 17.523 22 12C22 6.477 17.523 2 12 2ZM15.5 14.5C14.672 14.5 14 13.828 14 13C14 12.172 14.672 11.5 15.5 11.5C16.328 11.5 17 12.172 17 13C17 13.828 16.328 14.5 15.5 14.5ZM8.5 14.5C7.672 14.5 7 13.828 7 13C7 12.172 7.672 11.5 8.5 11.5C9.328 11.5 10 12.172 10 13C10 13.828 9.328 14.5 8.5 14.5Z" fill="white"/>
+                    </svg>
+                </div>
+            </div>
+
+            <h1 class="card-title">Try Copilot Pro for 30 days free</h1>
+            
+            <div class="feature-section">
+                <p class="feature-intro">Everything in Copilot Free and:</p>
+                <ul class="feature-list">
+                    <li><span class="check">✓</span> Unlimited agent mode and chat with GPT-5*</li>
+                    <li><span class="check">✓</span> Unlimited code completions*</li>
+                    <li><span class="check">✓</span> Access to Anthropic Claude Sonnet 4, GPT-5, Gemini 2.5 Pro, and more</li>
+                    <li><span class="check">✓</span> 300 premium requests to use the latest models and code review</li>
+                </ul>
+            </div>
+
+            <button class="try-now-btn">Try now</button>
+        </div>
+    </main>
+
+    <footer class="footer-minimal">
+        <div class="footer-content">
+            <div class="footer-left">
+                <svg height="20" viewBox="0 0 16 16" width="20" class="github-logo"><path fill="#7d8590" d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"></path></svg>
+                <span>© 2026 GitHub, Inc.</span>
+            </div>
+            <nav class="footer-links">
+                <a href="#">Terms</a>
+                <a href="#">Privacy</a>
+                <a href="#">Security</a>
+                <a href="#">Status</a>
+                <a href="#">Community</a>
+                <a href="#">Docs</a>
+                <a href="#">Contact</a>
+                <a href="#">Manage cookies</a>
+                <a href="#">Do not share my personal information</a>
+            </nav>
+        </div>
+    </footer>
+</div>
+<script src="./index.js"></script>
+</body>
+</html>

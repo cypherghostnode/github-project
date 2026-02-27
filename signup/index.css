@@ -1,0 +1,293 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.signup-container {
+  display: flex;
+  min-height: 150vh; /* Takes up most of the screen height */
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+/* The Left Side */
+.signup-content {
+  flex: 1;
+  background-color: #4A90E2;
+  color: white;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+ background: 
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+    url('../image/imgi_3_tres-amigos@2x.webp') no-repeat center 20%, /* Positioned 20% from top */
+    url('../image/imgi_21_bg-darkest-medium@2x.webp');
+    
+  background-size: auto, 470px, cover; /* Adjust sizes: overlay, inner-img, main-bg */
+  background-position: center, bottom center, center;
+}
+
+.signup-content h1{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    margin-top: 40px;
+    line-height: 48px;
+    margin-right: 23px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff;
+}
+
+.signup-content p{
+    font-style: normal;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 450;
+    font-size: 14px;
+    margin-top: 12px;
+    line-height: 21px;
+    align-items: center;
+    text-align: start;
+    color: #ffff;
+}
+
+.signup-content .highlight-link {
+  display: block;   /* Forces this text onto a new line */
+  margin-top: 15px; /* This replaces your <br><br> with precise spacing */
+  color: #fff;   /* Optional: makes it stand out */
+  cursor: pointer;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  margin-right: 15.5rem;
+  
+}
+
+.signup-content .highlight-link i{
+    color: #fff;
+    transition: transform 0.3s ease;
+}
+
+.dropdown-menu {
+  /* 1. Start at 0 so it is hidden */
+  max-height: 0; 
+  opacity: 0;
+  overflow: hidden;
+  width: 410px;
+  margin-top: 0;
+  
+  /* 2. Transition MUST target max-height */
+  transition: max-height 0.5s , opacity 0s ease;
+  
+  background: rgba(0, 0, 0, 0.05);
+  border: 3px solid transparent; /* Keep border width consistent to prevent 'jumping' */
+}
+
+.dropdown-menu.show {
+  /* 3. Open to exactly 700px */
+  max-height: 700px; 
+  opacity: 1;
+  margin-top: 15px;
+  min-height: 370px; 
+}
+#chevron {
+  transition: transform 0.3s ease;
+  color: white;
+  margin-left: 8px;
+}
+
+.dropdown-menu ul {
+  list-style: none;
+  padding: 15px; 
+  margin: 0;
+}
+
+.dropdown-menu li {
+  display: flex;         /* Puts icon and text side-by-side */
+  align-items: start; 
+  text-align: start;
+  gap: 7px;            /* Space between icon and text */
+  margin-bottom: 20px;   /* Space between feature blocks */
+  color: white;
+  font-size: 14px;
+  font-weight: 450px;
+  line-height: 21px;
+  font-style: normal;
+  font-family: Arial, Helvetica, sans-serif;
+}
+/* The Right Side */
+.signup-form-wrapper {
+  flex: 1;
+  background-color: white;
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  color: #1f2328;
+}
+
+.signin-header {
+  align-self: flex-end;
+  font-size: 14px;
+  margin-bottom: 40px;
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+  line-height:21px;
+}
+
+.signin-header a {
+  color: #24292F;
+  text-decoration: underline;
+}
+
+.form-container {
+  max-width: 440px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.form-container h1 {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 31px;
+  font-style: normal;
+  color: #24292F;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 24px;
+}
+
+/* Social Buttons */
+.social-logins {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.btn-social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: #f6f8fa;
+  border: 1px solid #d0d7de;
+  padding: 10px;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-social:hover {
+  background: #ebeff2;
+}
+
+.btn-social img, .btn-social i {
+  width: 18px;
+  font-size: 18px;
+}
+
+/* Divider line with text */
+.divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 24px 0;
+  color: #656d76;
+}
+
+.divider::before, .divider::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid #d0d7de;
+}
+
+.divider span {
+  padding: 0 10px;
+}
+
+/* Form Inputs */
+.input-group {
+  margin-bottom: 16px;
+}
+
+.input-group label {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 8px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #d0d7de;
+  border-radius: 6px;
+  font-size: 13px;
+}
+
+.input-group input:focus {
+  border-color: #0969da;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(9, 105, 218, 0.3);
+}
+
+.input-hint {
+  font-size: 12px;
+  font-style: normal;
+  color: #656d76;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 6px;
+  line-height: 1.5;
+}
+
+.btn-signup {
+  width: 100%;
+  background-color: #24292F;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  
+  /* Alignment for the icon */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px; /* Space between text and chevron */
+  transition: background-color 0.2s, gap 0.2s;
+}
+
+.btn-signup:hover {
+  background-color: #24292fd4;
+  gap: 14px; /* The icon "pushes" forward slightly on hover */
+}
+
+.btn-signup i {
+  font-size: 12px; /* Chevrons usually look better slightly smaller than the text */
+  transition: transform 0.2s;
+}
+
+.terms-text {
+  font-size: 12px;
+  color: #656d76;
+  line-height: 1.6;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 25px;
+  color: #57606A;
+  font-weight: 450;
+  text-align: left;
+}
+
+.terms-text a {
+  color: #0969da;
+  text-decoration: underline;
+}
+
+/* Responsive: Stack them on mobile */
+@media (max-width: 768px) {
+  .signup-container {
+    flex-direction: column;
+  }
+}

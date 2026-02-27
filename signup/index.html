@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signup</title>
+    <link rel="stylesheet" href="../signup/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+<body>
+    <section class="signup-container">
+  <div class="signup-content">
+  <h1>Create your free account</h1>
+  <p>Explore GitHub's core features for individuals and organizations.</p>
+  
+  <span class="highlight-link" id="toggleBtn">
+    See what's included 
+    <i class="fa-solid fa-chevron-down" id="chevron"></i>
+  </span>
+
+  <div id="features-dropdown" class="dropdown-menu">
+    <ul>
+      <li><i class="fa-solid fa-check"></i> Access to GitHub Copilot <br>
+      Increase your productivity and accelerate software <br> development.</li>
+      <li><i class="fa-solid fa-check"></i> Unlimited repositories <br>
+      Collaborate securely on public and private projects.</li>
+      <li><i class="fa-solid fa-check"></i> Integrated code reviews <br>
+      Boost code quality with built-in review tools.</li>
+      <li><i class="fa-solid fa-check"></i>Automated workflows <br>
+      Save time with CI/CD integrations and GitHub Actions.</li>
+      <li><i class="fa-solid fa-check"></i> Community support <br>
+      Connect with developers worldwide for instant feedback <br> and insights.</li>
+    </ul>
+  </div>
+</div>
+
+  <div class="signup-form-wrapper">
+  <div class="signin-header">
+    Already have an account? <a href="../login/index.html">Sign in &rarr;</a>
+  </div>
+
+  <div class="form-container">
+    <h1>Sign up for GitHub</h1>
+
+    <div class="social-logins">
+      <button class="btn-social">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google">
+        Continue with Google
+      </button>
+      <button class="btn-social">
+        <i class="fa-brands fa-apple"></i>
+        Continue with Apple
+      </button>
+    </div>
+
+    <div class="divider">
+      <span>or</span>
+    </div>
+
+    <form>
+      <div class="input-group">
+        <label>Email<sup>*</sup></label>
+        <input type="email" placeholder="Email" required>
+      </div>
+
+      <div class="input-group">
+        <label>Password<sup>*</sup></label>
+        <input type="password" placeholder="Password" required>
+        <p class="input-hint">Password should be at least 15 characters OR at least 8 characters including a number and a lowercase letter.</p>
+      </div>
+
+      <div class="input-group">
+        <label>Username<sup>*</sup></label>
+        <input type="text" placeholder="Username" required>
+        <p class="input-hint">Username may only contain alphanumeric characters or single hyphens, and cannot begin or end with a hyphen.</p>
+      </div>
+
+      <button type="submit" class="btn-signup">
+        Create Account
+      <i class="fa-solid fa-chevron-right"></i>
+      </button>
+
+      <p class="terms-text">
+      By creating an account, you agree to the <a href="#">Terms of Service</a>. 
+      For more information about GitHub's privacy practices, see the 
+  <a href="#">GitHub Privacy Statement</a>. We'll occasionally send you 
+  account-related emails.
+</p>
+    </form>
+  </div>
+</div>
+</section>
+</body>
+<script>
+  // First, we must "grab" the elements from the HTML
+  const toggleBtn = document.getElementById('toggleBtn');
+  const dropdown = document.getElementById('features-dropdown');
+  const icon = document.getElementById('chevron');
+
+  toggleBtn.addEventListener('click', () => {
+    event.preventDefault();
+    dropdown.classList.toggle('show');
+    
+    // Rotate icon based on the state
+    if (dropdown.classList.contains('show')) {
+      icon.style.transform = 'rotate(180deg)';
+    } else {
+      icon.style.transform = 'rotate(0deg)';
+    }
+  });
+</script>
+</html>
